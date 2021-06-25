@@ -1,0 +1,533 @@
+*{
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    /*font-family: cursive;*/
+}
+
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.delte{
+    margin-top: 2rem;
+    width: 6rem;
+    height: 3rem;
+    background-color: rgb(194, 194, 194);
+    color: rgb(187, 0, 0);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.delte:active{
+    background-color: rgb(124, 124, 124);
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    min-height: 3.1rem;
+    font-size: 1.2rem;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0 0 15px -2px rgb(105, 105, 105);
+    z-index: 980;
+}
+.adjust{
+    width: 100%;
+    height: 4rem;
+}
+
+.icons{
+    height: 3rem;
+    width: 6rem;
+    font-weight: bold;
+    background-color: transparent;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    user-select: none;
+    background-color: white;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.icons:active{
+    background-color: rgb(221, 221, 221);
+}
+.icons:nth-child(3){
+    margin-right: 3rem;
+}
+.ovelay2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 999;
+    opacity: 0.7;
+    visibility: hidden;
+    transition: all 0.1s linear;
+    transition: 0.1s all ease;
+}
+.ovelay2.active{
+    visibility: visible;
+    transition: all 0.1s linear;
+    transition: 0.1s all ease;
+}
+
+.allContent{
+    min-height: 100vh;
+  display: inline-flex;
+  transform: translateX(0);
+  will-change: transform;
+  transition: transform 0.3s ease-out;
+}
+
+.content{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*-----------------------------------Content 1----------------------*/
+.allClocks{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 50%;
+}
+.timer1{
+    width: 17rem;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ManualClock{
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#fillHrs{
+    width: 7rem;
+    height: 2rem;
+    border: 2px solid black;
+    font-size: 1.1rem;
+    text-align: right;
+}
+.aBar{
+    width: 1rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.baraside{
+    width: 3px;
+    background-color: black;
+    flex: 1;
+}
+.aBar p{
+    width: fit-content;
+    background-color: white;
+    color: black;
+}
+.timerPar{
+    flex: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.label{
+    color: rgb(223, 77, 58);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tstyl{
+    border: none;
+    outline: none;
+    height: 1.3rem;
+    width: 7rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.far.fa-clock{
+    visibility: hidden;
+}
+
+.CategoryContainer{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.CategoryContainer label{
+    user-select: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0.5rem auto;
+    height: 2rem;
+    width: 15rem;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    align-items: center;
+    border: 2px solid rgb(2, 0, 0);
+    border-radius: 1.2rem;
+}
+
+.CategoryContainer input[type="radio"]:checked + label{
+    background-color: rgb(223, 77, 58);
+    color: white;
+    transition: 0.2s all ease;
+}
+
+.tasks{
+    margin-top: 3rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.ChosOpt{
+    height: 2rem;
+    min-width: 7rem;
+    max-width: 80vw;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+.ChosOpt:active{
+    transform: scale(0.97);
+    
+}
+
+.subButton{
+    margin-top: 3rem;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgb(223, 77, 58);
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.subButton:active{
+    background-color: rgb(165, 42, 26);
+    box-shadow: 0 0 4px 0px rgb(44, 44, 44);
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    height: 20rem;
+    width: 15rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    transition: 0.1s all ease;
+    overflow: hidden;
+    font-size: 1rem;
+}
+.popup.active{
+    visibility: visible;
+    transition: 0.1s all ease;
+}
+.popup input[type="radio"]{
+    display: inline-flex;
+}
+
+.taskContainer{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+    height: 100%;
+}
+.taskContainer li{
+    min-height: 1.7rem;
+    width: 100%;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+}
+.taskContainer li:active{
+    background-color: rgb(219, 219, 219);
+}
+
+.inpuConatin{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgb(180, 180, 180);
+}
+
+#newTask{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    height: 1.5rem;
+    font-size: 1.1rem;
+    width: 10rem;
+}
+
+.plusL{
+    height: 2.7rem;
+    width: 2.7rem;
+    background-color: rgb(211, 211, 211);
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1.35rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.plusL:active{
+    background-color: rgb(175, 175, 175);
+}
+/*-----------------------------------Content 3----------------------*/
+
+.analyCon{
+    margin-top: 8rem;
+    height: 20rem;
+    width: 20rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.first:nth-child(1){
+    border-right: 2px solid rgb(223, 77, 58);
+    border-bottom: 2px solid rgb(223, 77, 58);
+}
+.first:nth-child(2){
+    border-left: 2px solid rgb(223, 77, 58);
+    border-bottom: 2px solid rgb(223, 77, 58);
+}
+.first:nth-child(3){
+    border-top: 2px solid rgb(223, 77, 58);
+    border-right: 2px solid rgb(223, 77, 58);
+}
+.first:nth-child(4){
+    border-top: 2px solid rgb(223, 77, 58);
+    border-left: 2px solid rgb(223, 77, 58);
+}
+
+.toastNotify{
+    position: fixed;
+    top: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.3rem;
+    min-width: 7rem;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(175, 255, 206);
+    z-index: 1000;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.toastNotify.animate{
+    animation: popping 2s forwards ease;
+}
+@keyframes popping {
+    0%{
+        top: -5rem;
+    }
+    10%{
+        top: 0rem;
+    }
+    90%{
+        top: 0rem;
+    }
+    100%{
+        top: -5rem;
+    }
+}
+
+.DateOpt{
+    height: 2rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+
+
+@media screen and (max-width:960px){
+    
+    .header{
+        display: flex;
+        width: 100vw;
+        min-height: 3.1rem;
+        font-size: 1.2rem;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .adjust{
+        width: 100%;
+        height: 1rem;
+    }
+    .icons{
+        height: 3rem;
+        width: 6rem;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        margin-left: 0rem;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .icons:nth-child(3){
+        margin-right: 0rem;
+    }
+    
+    
+
+    
+    .allContent{
+        min-height: 100vh;
+        display: inline-flex;
+        transform: translateX(0);
+        will-change: transform;
+        transition: transform 0.3s ease-out;
+    }
+    .content{
+        width: 100vw;
+    }
+    .allClocks{
+        width: 100vw;
+    }
+    
+    .timer1{
+        width: 9rem;
+        height: 2.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .tstyl{
+        border: none;
+        outline: none;
+        height: 1.5rem;
+        width: 5.6rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
+    .far.fa-clock{
+        visibility: visible;
+        font-size: 1.1rem;
+    }
+    .popup{
+        width: 80%;
+    }
+    .taskContainer li{
+        min-height: 2.2rem;
+    }
+    .popup{
+        z-index: 9999;
+    }
+    .ovelay2{
+        z-index: 999;
+    }
+
+    .toastNotify{
+        position: fixed;
+        top: -5rem;
+        transform: translateX(0);
+        left: 0.5rem;
+        right: 0.5rem;
+        height: 2.5rem;
+        min-width: 7rem;
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: bold;
+        background-color: rgb(175, 255, 206);
+        z-index: 10000;
+        border: 2px solid rgb(0, 0, 0);
+    }
+    @keyframes popping {
+        0%{
+            top: -5rem;
+        }
+        10%{
+            top: -0.3rem;
+        }
+        90%{
+            top: -0.3rem;
+        }
+        100%{
+            top: -5rem;
+        }
+    }
+}
+

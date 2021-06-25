@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css"  type="text/css">
+    <link rel="shortcut icon" href="./Contents/Logo2.png" type="image/x-icon">
+    
+    <title>Project</title>
+  </head>
+  <body>
+    
+    <div class="toastNotify">
+        
+    </div>
+
+    <div class="header">
+      <div  class="icons" onclick="swipeleft1()">
+        Add Task
+      </div>
+      <div class="icons" onclick="swipeleft2()">
+        Focus
+      </div>
+
+      <div class="icons" onclick="swipeleft3()">
+        Summary
+      </div>
+    </div>
+
+<!--------------------------------Content one---------------------------->
+    <div class="allContent" id="allcont">
+      <div class="content">
+        <div class="adjust"></div>
+        <!--Clock Here-->
+        <div class="allClocks">
+          <div class="timerPar">
+            <div class="timer1">
+              <div class="label">From</div>
+              <div class="timeContain">
+                <input class="tstyl" type="time" id="clk1">
+              </div>
+            </div>
+            <div class="timer1">
+              <div class="label">To</div>
+              <div class="timeContain">         
+                <input class="tstyl" type="time" id="clk2">
+              </div>
+            </div>
+          </div>
+          <div class="aBar">
+            <div class="baraside"></div>
+            <p>OR</p>
+            <div class="baraside"></div>
+          </div>
+          <div class="ManualClock">
+            <input type="number" placeholder="eg 1.5 (in hr)" id="fillHrs">
+          </div>
+        </div>
+        
+
+        <!--Categories Here-->
+        <div class="CategoryContainer">
+          <input type="radio" name="category" id="c1" onclick="putCategory('Urgent & Important')">
+          <label for="c1">Urgent & Important</label>
+          <input type="radio" name="category" id="c2" onclick="putCategory('Urgent & Not Important')">
+          <label for="c2">Urgent & Not Important</label>
+          <input type="radio" name="category" id="c3" onclick="putCategory('Not Urgent & Important')">
+          <label for="c3">Not Urgent & Important</label>
+          <input type="radio" name="category" id="c4" onclick="putCategory('Not Urgent & Not Important')">
+          <label for="c4">Not Urgent & Not Important</label>
+        </div>
+
+        <div class="tasks">
+          <div class="ChosOpt" onclick="ChooseTask()">
+            <p id="taskSel"> -- Choose Task -- </p>
+            <i style="margin-left: 0.5rem;" class="fas fa-caret-down"></i>
+          </div>
+        </div>
+
+        <div class="subBtn">
+          <input type="submit" value="Submit" class="subButton" onclick="Submitted()">
+        </div>
+      </div>
+
+      
+
+<!--------------------------------Content TWO---------------------------->
+      <div class="content">
+        <span style="font-size: 1.2rem; font-weight: bold;">Comming soon...</span>
+      </div>
+
+<!--------------------------------Content 3---------------------------->
+      <div class="content">
+        <div class="analyCon">
+          <div class="first">
+            <p>U & I <br><br> <span class="percentH"></span> <br> <span class="HrsH"></span></p>
+          </div>
+          <div class="first">
+            <p>U & NI <br><br> <span class="percentH"></span> <br> <span class="HrsH"></span></p>
+          </div>
+          <div class="first">
+            <p>NU & I <br><br> <span class="percentH"></span> <br> <span class="HrsH"></span></p>
+          </div>
+          <div class="first">
+            <p>NU & NI <br><br> <span class="percentH"></span> <br> <span class="HrsH"></span></p>
+          </div>
+        </div>
+        <select name="" id="" class="DateOpt" onchange="UpdateAnalysis()">
+
+        </select>
+        <div class="delte" onclick="deleteAll()"><i class="far fa-trash-alt"></i></div>
+      </div>
+
+
+    </div>
+
+    <!--POP UP-->
+    <div class="popup">
+      <ul class="taskContainer">
+        
+      </ul>
+      <div class="inpuConatin">
+        <input type="text" id="newTask" placeholder="Add task.." > 
+        <div class="plusL" onclick="addTask()">+</div>
+      </div>
+    </div>
+  <div class="ovelay2" onclick="togglePop()"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
